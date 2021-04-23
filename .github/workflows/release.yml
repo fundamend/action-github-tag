@@ -24,7 +24,7 @@ jobs:
 
       - name: Tag
         if: steps.version.outputs.changed == 'true'
-        uses: fundamend/actions-github-tag@main
+        uses: fundamend/action-github-tag@main
         with:
           tag: ${{ steps.version.outputs.version }}
           github-toke: ${{ secrets.GITHUB_TOKEN }}
