@@ -1,0 +1,44 @@
+name: Release
+
+on: [push]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Check Version Change
+        uses: EndBug/version-check@v1
+        id: version
+
+      - name: Version Update Detected
+        if: steps.version.outputs.changed == 'true'
+        run: 'echo "Version change found! New version: ${{ steps.version.outputs.version }} (${{ steps.version.outputs.type }})"'
+
+      - name: Install Dependencies
+        if: steps.version.outputs.changed == 'true'
+        shell: bash
+        run: npm install
+
+      - name: Tag
+        if: steps.version.outputs.changed == 'true'
+        uses: fundamend/actions-github-tag@main
+        with:
+          tag: ${{ steps.version.outputs.version }}
+          github-toke: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to NPM
+        if: steps.version.outputs.changed == 'true'
+        shell: bash
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish
+
+      - name: Create GitHub Release
+        if: steps.version.outputs.changed == 'true'
+        shell: bash
+        env:
+          CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: 'npm run conventional-github-releaser --preset angular'

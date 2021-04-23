@@ -1,0 +1,19 @@
+name: 'GitHub Tag'
+
+description: 'Tags the head of the repository'
+
+inputs:
+  tag:
+    description: 'Prefix for the split'
+    required: true
+  github-token:
+    description: 'Full name of the target repository (e.g. owner/repository)'
+    required: true
+
+runs:
+  using: 'node12'
+  main: 'build/index.js'
+
+branding:
+  icon: git-commit
+  color: green
