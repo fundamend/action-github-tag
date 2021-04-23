@@ -8,10 +8,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Check Version Change
         uses: EndBug/version-check@v1
         id: version
+        with:
+          diff-search: true
 
       - name: Version Update Detected
         if: steps.version.outputs.changed == 'true'
