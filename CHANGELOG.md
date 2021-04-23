@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/fundamend/fundamend/compare/@fundamend/action-github-tag@0.0.4...@fundamend/action-github-tag@0.0.5) (2021-04-23)
+
+### Bug Fixes
+
+- fix 'TypeError: s.GitHub is not a constructor' ([801b59c](https://github.com/fundamend/fundamend/commit/801b59caa69dbd2e0599d9f15c1fe973029c6d47))
+
 ### [0.0.4](https://github.com/fundamend/fundamend/compare/@fundamend/action-github-tag@0.0.3...@fundamend/action-github-tag@0.0.4) (2021-04-23)
 
 ### [0.0.3](https://github.com/fundamend/fundamend/compare/@fundamend/action-github-tag@0.0.2...@fundamend/action-github-tag@0.0.3) (2021-04-23)
