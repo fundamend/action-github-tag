@@ -7,7 +7,7 @@ async function run() {
 		const tag = core.getInput('tag', { required: true });
 		const sha = github.context.sha;
 
-		const client = new github.GitHub(token);
+		const client = new github.getOctokit(token);
 
 		core.debug(`Tagging #${sha} with tag ${tag}`);
 		await client.git.createRef({

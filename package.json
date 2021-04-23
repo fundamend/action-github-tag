@@ -37,7 +37,7 @@
 		"lint:js:fix": "eslint **/*.js --fix",
 		"lint:md": "remark . --ignore-path .gitignore",
 		"lint:md:fix": "remark . --ignore-path .gitignore --output",
-		"build": "ncc build src/index.js --out build --minify",
+		"build": "ncc build src/index.js --out build --source-map --minify",
 		"precommit": "yarn build && lint-staged",
 		"release": "yarn release:tag && yarn:release:npm && yarn:release:github",
 		"release:github": "conventional-github-releaser --preset angular",
