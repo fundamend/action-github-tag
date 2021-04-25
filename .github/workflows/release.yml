@@ -43,7 +43,7 @@ jobs:
         shell: bash
         env:
           CONVENTIONAL_GITHUB_RELEASER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: 'npx conventional-github-releaser --preset angular'
+        run: 'npx conventional-github-releaser --preset conventionalcommits'
 
       - name: 'Configure NPM'
         if: steps.version.outputs.changed == 'true'
