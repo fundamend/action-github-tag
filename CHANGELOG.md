@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/fundamend/fundamend/compare/@fundamend/action-github-tag@0.0.8...@fundamend/action-github-tag@0.0.9) (2021-04-25)
+
 ### [0.0.8](https://github.com/fundamend/fundamend/compare/@fundamend/action-github-tag@0.0.7...@fundamend/action-github-tag@0.0.8) (2021-04-25)
 
 ### [0.0.7](https://github.com/fundamend/fundamend/compare/@fundamend/action-github-tag@0.0.6...@fundamend/action-github-tag@0.0.7) (2021-04-23)
