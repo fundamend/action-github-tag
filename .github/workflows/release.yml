@@ -33,6 +33,11 @@ jobs:
           tag: ${{ steps.version.outputs.version }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
       - name: Create GitHub Release
         if: steps.version.outputs.changed == 'true'
         shell: bash
