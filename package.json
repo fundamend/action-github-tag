@@ -6,11 +6,11 @@
 		"@actions/github": "^5.0.0"
 	},
 	"devDependencies": {
-		"@fundamend/config-eslint": "^0.0.0",
-		"@fundamend/config-lint-staged": "^0.0.0",
-		"@fundamend/config-prettier": "^0.0.0",
-		"@fundamend/config-remark": "^0.0.0",
-		"@fundamend/config-standard-version": "^0.0.5",
+		"@fundamend/config-eslint": "*",
+		"@fundamend/config-lint-staged": "*",
+		"@fundamend/config-prettier": "*",
+		"@fundamend/config-remark": "*",
+		"@fundamend/config-standard-version": "*",
 		"@vercel/ncc": "^0.28.3",
 		"conventional-github-releaser": "3.1.3",
 		"cross-env": "^7.0.3",
