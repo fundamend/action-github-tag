@@ -1,6 +1,6 @@
 {
 	"name": "@fundamend/action-github-tag",
-	"version": "0.0.9",
+	"version": "0.1.0",
 	"dependencies": {
 		"@actions/core": "^1.2.7",
 		"@actions/github": "^5.0.0"
